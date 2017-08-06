@@ -1,6 +1,6 @@
 class Instructor::CoursesController < ApplicationController
   before_action :authenticate_user!
-  before_action :require_authorized_for_current_course
+  before_action :require_authorized_for_current_course, only: [:show]
 
   def new
     @course = Course.new
@@ -27,7 +27,7 @@ class Instructor::CoursesController < ApplicationController
 
   def require_authorized_for_current_course
     if current_course.user != current_user
-      return render plain: 'You are not authorized to do that',
+      render plain: 'You are not authorized to do that',
       status: :unauthorized
     end
   end
