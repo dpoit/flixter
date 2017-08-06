@@ -20,7 +20,8 @@ class Instructor::LessonsController < ApplicationController
 
   def require_authorized_for_current_section
     if current_section.course.user != current_user
-      return render plain: 'You are not authorized to do that', status: :unauthorized
+      return render plain: 'You are not authorized to do that',
+      status: :unauthorized
     end
   end
 
