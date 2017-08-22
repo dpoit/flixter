@@ -16,6 +16,11 @@
         <%= link_to 'Manage this course', instructor_course_path,
         class: 'btn btn-danger btn-large' %>
       <% end %>
+
+      <br />
+      <br />
+      <%= link_to 'Enroll', course_enrollments_path(@course), class:
+      'btn btn-primary', method: :post %>
     </div>
 
     <div class="col-sm-8 col-12">
@@ -38,10 +43,10 @@
                     <%= lesson.subtitle %>
                   <% end %>
                 </div>
-                <br class="clr" />
               </div>
             <% end %>
           </div>
+          <br class="clr" />
         </div>
       <% end %>
     </div>
