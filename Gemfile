@@ -58,18 +58,21 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
 
+# Use simple_form for better forms
 gem 'simple_form'
-
+# Use devise to manage users and logins
 gem 'devise'
-
+# Use carrierwave for uploading images
 gem 'carrierwave', '~> 1.0'
-
+# Use figaro for syncing environment variables to Heroku
 gem 'figaro'
-
+# Use fog-aws for syncing carrierwave with AWS
 gem 'fog-aws'
-
+# Use mini_magick for resizing images using ImageMagick
 gem 'mini_magick'
-
+# Use carrierwave-aws to allow carrierwave to upload videos to aws
 gem 'carrierwave-aws'
-
+# Use stripe for accepting cc payments
 gem 'stripe'
+# Use ranked-model for ordering lessons and sections
+gem 'ranked-model'
