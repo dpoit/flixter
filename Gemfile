@@ -76,3 +76,5 @@ gem 'carrierwave-aws'
 gem 'stripe'
 # Use ranked-model for ordering lessons and sections
 gem 'ranked-model'
+# Use jquery UI for rails
+gem 'jquery-ui-rails'
