@@ -78,3 +78,5 @@ gem 'stripe'
 gem 'ranked-model'
 # Use jquery UI for rails
 gem 'jquery-ui-rails'
+# Use FontAwesome for icon for sortable things
+gem 'font-awesome-rails'
