@@ -84,6 +84,14 @@ ul .header .fa {
   color: white;
 }
 
+.nav-link {
+  color: #999999;
+}
+
+.nav-link a:hover {
+  color: #cdcdcd;
+}
+
 .hero {
   background: image_url('hero.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
