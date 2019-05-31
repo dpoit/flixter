@@ -18,7 +18,7 @@ Creating a user will allow you to enroll in courses, pay enrollment fees, and ke
 
 To view courses, users can click either 'See All Courses' at the top left or 'Browse Courses' in the middle of the hero section. 
 
-![screenshot](https://i.imgur.com/runskaL.png "See All Courses and Browse Courses links")
+![screenshot](https://i.imgur.com/aEVL9hl.png "See All Courses and Browse Courses links")
 
 From the courses page, scroll to find the course you want, then click either the title of the course or 'More Details...' 
 
