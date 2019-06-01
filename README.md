@@ -64,6 +64,21 @@ To add more sections and/or lessons to a course you've created, return to the co
 
 This will take the instructor back into the editing mode where they can add sections and lessons. Note: You can only add sections and/or lessons to courses you have created.
 
+## Tech used
+
+* [Rails](https://rubyonrails.org/) (5.0.7.2)
+* [Bootstrap](https://getbootstrap.com/) (4.3.1)
+* [simple_form](https://github.com/plataformatec/simple_form) (4.1.0)
+* [Devise](https://github.com/plataformatec/devise) (4.6.2)
+* [CarrierWave](https://github.com/carrierwaveuploader/carrierwave) (1.3.1)
+* [Figaro](https://github.com/laserlemon/figaro) (1.1.1)
+* [AWS](https://aws.amazon.com/)/[fog-aws](https://github.com/fog/fog-aws) (3.4.0)
+* [ImageMagick](https://imagemagick.org/)/[MiniMagick](https://github.com/minimagick/minimagick) (4.9.3)
+* [Stripe](https://stripe.com/) (4.11.0)
+* [ranked-model](https://github.com/mixonic/ranked-model) (0.4.4)
+* [jQuery UI](https://jqueryui.com/) (6.0.1)
+* [Font Awesome](https://fontawesome.com) (4.7.0.4)
+
 ## Authors
 
 * **[Danny Poit](https://github.com/dpoit)**
