@@ -4,7 +4,7 @@ A two-sided, video-streaming marketplace platform that features credit card paym
 
 ## URL
 
-[https://flixter-danny-poit.herokuapp.com/](https://flixter-danny-poit.herokuapp.com/)
+[http://flixter.dannypoit.com/](http://flixter.dannypoit.com/)
 
 ## Users
 
