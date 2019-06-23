@@ -175,8 +175,9 @@ ul .header .fa {
 }
 
 .course {
-  margin-top: 50px;
   max-width: 800px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -190,5 +191,9 @@ ul .header .fa {
 }
 
 input {
+  margin-right: 5px;
+}
+
+.control-label {
   margin-right: 5px;
 }

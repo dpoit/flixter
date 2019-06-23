@@ -31,66 +31,71 @@
 
 <br />
 
-<div class="booyah-box col-10 offset-1">
-  <h1><%= current_course.title %></h1>
-  <%= image_tag current_course.image, class: 'img-fluid' %>
-  <br />
-  <%= link_to 'Preview as student...', course_path(current_course),
-  class: 'btn btn-warning float-right' %>
-  <br class="clr" />
+<div class="booyah-box col-lg-8 offset-lg-2 col-10 offset-1">
+  <div class="course">
+    <h2 class="text-center">
+      <%= current_course.title %>
+    </h2>
+    <%= image_tag current_course.image, class: 'img-fluid course-image' %>
+    <div class="more">
+      <%= link_to 'Preview as student...', course_path(current_course), class: 'btn btn-warning float-right' %>
+    </div>
 
-  <div class="text-center">
-    <!-- Button trigger newSectionModal -->
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
-    data-target="#newSectionModal">
-      Add a new section...
-    </button>
+    <br class="clr" />
+
+    <div class="text-center">
+      <!-- Button trigger newSectionModal -->
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
+      data-target="#newSectionModal">
+        Add a new section...
+      </button>
+    </div>
+
+    <ul class="sections">
+      <% current_course.sections.rank(:row_order).each do |section| %>
+        <li data-update-url="<%= instructor_section_path(section) %>"
+        class="section-li">
+          <div class="header">
+            <i class="fa fa-ellipsis-v"></i>
+            <%= section.title %>
+          </div>
+          <!-- Button trigger newLessonModal -->
+          <button type="button"
+          class="float-right btn btn-primary btn-lg new-lesson-button"
+          data-toggle="modal" data-target="#newLessonModal"
+          data-lesson-url="<%= instructor_section_lessons_path(section) %>">
+            Add a new lesson...
+          </button>
+
+          <br class="clr" />
+          <br class="clr" />
+          <ul class="lessons">
+            <% section.lessons.rank(:row_order).each do |lesson| %>
+              <li data-update-url="<%= instructor_lesson_path(lesson) %>">
+                <div class="row">
+                  <div class="col-1">
+                    <br />
+                    <i class="fa fa-ellipsis-v"></i>
+                  </div>
+                  <div class="col-11 text-center">
+                    <br />
+                    <p>
+                      <b><%= lesson.title %></b>
+                    </p>
+                    <p>
+                      <%= lesson.subtitle %>
+                    </p>
+                  </div>
+                </div>
+                <br class="clr" />
+              </li>
+            <% end %>
+          </ul>
+          <br class="clr" />
+        </li>
+      <% end %>
+    </ul>
   </div>
-
-  <ul class="sections">
-    <% current_course.sections.rank(:row_order).each do |section| %>
-      <li data-update-url="<%= instructor_section_path(section) %>"
-      class="section-li">
-        <div class="header">
-          <i class="fa fa-ellipsis-v"></i>
-          <%= section.title %>
-        </div>
-        <!-- Button trigger newLessonModal -->
-        <button type="button"
-        class="float-right btn btn-primary btn-lg new-lesson-button"
-        data-toggle="modal" data-target="#newLessonModal"
-        data-lesson-url="<%= instructor_section_lessons_path(section) %>">
-          Add a new lesson...
-        </button>
-
-        <br class="clr" />
-        <br class="clr" />
-        <ul class="lessons">
-          <% section.lessons.rank(:row_order).each do |lesson| %>
-            <li data-update-url="<%= instructor_lesson_path(lesson) %>">
-              <div class="row">
-                <div class="col-1">
-                  <br />
-                  <i class="fa fa-ellipsis-v"></i>
-                </div>
-                <div class="col-11 text-center">
-                  <br />
-                  <p>
-                    <b><%= lesson.title %></b>
-                  </p>
-                  <p>
-                    <%= lesson.subtitle %>
-                  </p>
-                </div>
-              </div>
-              <br class="clr" />
-            </li>
-          <% end %>
-        </ul>
-        <br class="clr" />
-      </li>
-    <% end %>
-  </ul>
 </div>
 
 <!-- newSectionModal -->
