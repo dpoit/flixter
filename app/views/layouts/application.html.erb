@@ -85,7 +85,7 @@
           <div class="col-12 col-sm-3">
             <b>Contact</b>
             <br />
-            dev@dannypoit.com
+            <%= mail_to 'dev@dannypoit.com', 'dev@dannypoit.com' %>
             <br />
             4301 World Dr.
             <br />
@@ -96,13 +96,13 @@
             <b>Social</b>
             <br />
             <br />
-            <%= link_to 'https://github.com/dpoit' do %>
+            <%= link_to 'https://github.com/dannypoit', target: :_blank do %>
               <span class="fa fa-github-square fa-2x social-button"></span>
             <% end %>
-            <%= link_to 'https://www.facebook.com/dpoit' do %>
+            <%= link_to 'https://www.facebook.com/dannypoit', target: :_blank do %>
               <span class="fa fa-facebook-square fa-2x social-button"></span>
             <% end %>
-            <%= link_to 'https://twitter.com/DannyPoit' do %>
+            <%= link_to 'https://twitter.com/DannyPoit', target: :_blank do %>
               <span class="fa fa-twitter-square fa-2x social-button"></span>
             <% end %>
           </div>
