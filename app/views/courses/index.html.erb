@@ -10,17 +10,18 @@
         <%= link_to course.title, course_path(course) %>
       </h2>
       <%= image_tag course.image, class: 'img-fluid course-image' %>
-      <br />
       <div class="row">
-        <div class="col-sm-8 col-12">
-          <%= course.description %></p>
+        <div class="col-sm-9 col-12">
+          <%= course.description %>
         </div>
-        <div class="col-sm-4 col-12 text-center">
-          <%= link_to 'More Details...', course_path(course), class: 'btn btn-primary btn-large' %>
+        <div class="col-sm-3 col-12 more">
+          <%= link_to 'More Details...', course_path(course), class: 'btn btn-primary btn-large float-right' %>
         </div>
       </div>
     </div>
 
     <div class="clr"></div>
   <% end %>
+
+  <br />
 </div>
