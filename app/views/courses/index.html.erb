@@ -2,9 +2,8 @@
 
 <div class="booyah-box col-lg-8 offset-lg-2 col-10 offset-1">
   <h1 class="text-center">Available Courses</h1>
-  <hr />
-
   <% @courses.each do |course| %>
+    <hr class="col-8 offset-2" />
     <div class="course">
       <h2 class="text-center">
         <%= link_to course.title, course_path(course) %>
