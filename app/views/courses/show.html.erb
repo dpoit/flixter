@@ -2,9 +2,8 @@
 
 <div class="booyah-box col-lg-8 offset-lg-2 col-10 offset-1">
   <div class="course">
-    <h2 class="text-center">
-      <%= @course.title %>
-    </h2>
+    <h2 class="text-center"><%= @course.title %></h2>
+
     <%= image_tag @course.image, class: 'img-fluid course-image' %>
 
     <div class="row">
@@ -15,8 +14,8 @@
         </span>
 
         <% if current_user && current_user == @course.user %>
-
           <br />
+
           <%= link_to 'Manage this course', instructor_course_path,
           class: 'btn btn-danger btn-large' %>
         <% end %>
@@ -53,23 +52,30 @@
 
       <div class="col-12">
         <% @course.sections.rank(:row_order).each do |section| %>
-          <br /><br />
+          <br />
+          <br />
+
           <div class="section">
             <h3><%= section.title %></h3>
+
             <div class="row">
               <% section.lessons.rank(:row_order).each do |lesson| %>
                 <div class="col-12 col-sm-6">
                   <div class="lesson text-center">
                     <br />
+
                     <%= link_to lesson_path(lesson) do %>
-                      <b><%= lesson.title %></b>
+                      <span class="lesson-title"><%= lesson.title %></span>
+
                       <br />
+
                       <%= lesson.subtitle %>
                     <% end %>
                   </div>
                 </div>
               <% end %>
             </div>
+
             <br class="clr" />
           </div>
         <% end %>
