@@ -33,9 +33,7 @@
 
 <div class="booyah-box col-lg-8 offset-lg-2 col-10 offset-1">
   <div class="course">
-    <h2 class="text-center">
-      <%= current_course.title %>
-    </h2>
+    <h2 class="text-center"><%= current_course.title %></h2>
     <%= image_tag current_course.image, class: 'img-fluid course-image' %>
     <div class="more">
       <%= link_to 'Preview as student...', course_path(current_course), class:
@@ -47,7 +45,7 @@
     <div class="text-center">
       <!-- Button trigger newSectionModal -->
       <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
-      data-target="#newSectionModal">
+          data-target="#newSectionModal">
         Add a new section...
       </button>
     </div>
@@ -57,19 +55,18 @@
         <li data-update-url="<%= instructor_section_path(section) %>"
         class="section-li">
           <div class="header">
-            <i class="fa fa-ellipsis-v"></i>
-            <%= section.title %>
+            <i class="fa fa-ellipsis-v"></i><%= section.title %>
           </div>
           <!-- Button trigger newLessonModal -->
-          <button type="button"
-          class="float-right btn btn-primary btn-lg new-lesson-button"
-          data-toggle="modal" data-target="#newLessonModal"
-          data-lesson-url="<%= instructor_section_lessons_path(section) %>">
+          <button type="button" class="float-right btn btn-primary btn-lg
+              new-lesson-button" data-toggle="modal"
+              data-target="#newLessonModal" data-lesson-url="<%=
+              instructor_section_lessons_path(section) %>">
             Add a new lesson...
           </button>
 
           <br class="clr" />
-          <br class="clr" />
+
           <ul class="lessons">
             <% section.lessons.rank(:row_order).each do |lesson| %>
               <li data-update-url="<%= instructor_lesson_path(lesson) %>">
@@ -80,12 +77,8 @@
                   </div>
                   <div class="col-11 text-center">
                     <br />
-                    <p>
-                      <b><%= lesson.title %></b>
-                    </p>
-                    <p>
-                      <%= lesson.subtitle %>
-                    </p>
+                    <p><b><%= lesson.title %></b></p>
+                    <p><%= lesson.subtitle %></p>
                   </div>
                 </div>
                 <br class="clr" />
