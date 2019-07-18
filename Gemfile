@@ -71,7 +71,7 @@ gem 'figaro'
 # Use fog-aws for syncing carrierwave with AWS
 gem 'fog-aws'
 # Use mini_magick for resizing images using ImageMagick
-gem 'mini_magick'
+gem 'mini_magick', '>= 4.9.4'
 # Use carrierwave-aws to allow carrierwave to upload videos to aws
 gem 'carrierwave-aws'
 # Use stripe for accepting cc payments
