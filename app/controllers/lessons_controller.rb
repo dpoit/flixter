@@ -7,6 +7,15 @@ class LessonsController < ApplicationController
 
   private
 
+  helper_method :current_course
+  def current_course
+    if params[:course_id]
+      @current_course ||= Course.find(params[:course_id])
+    else
+      current_lesson.section.course
+    end
+  end
+
   helper_method :current_lesson
   def current_lesson
     @current_lesson ||= Lesson.find(params[:id])
