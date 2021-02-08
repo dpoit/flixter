@@ -65,7 +65,7 @@ gem 'simple_form'
 # Use devise to manage users and logins
 gem 'devise'
 # Use carrierwave for uploading images
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 # Use figaro for syncing environment variables to Heroku
 gem 'figaro'
 # Use fog-aws for syncing carrierwave with AWS
